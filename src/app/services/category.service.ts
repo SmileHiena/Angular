@@ -12,18 +12,18 @@ export class CategoryService {
   constructor(private httpClient: HttpClient) { }
 
   getAll() {
-    return this.httpClient.get(`${this.url}/category`);
+    return this.httpClient.get(`${this.url}/categories`);
   }
 
   get(id: string) {
-    return this.httpClient.get(`${this.url}/category/${id}`);
+    return this.httpClient.get(`${this.url}/categories/${id}`);
   }
 
   delete(id: string) {
-    return this.httpClient.delete(`${this.url}/category/${id}`);
+    return this.httpClient.delete(`${this.url}/categories/${id}`);
   }
-  save(category: Category) {
-    return this.httpClient.post(`${this.url}/category`, category);
+  save(categories: Category) {
+    return this.httpClient.post(`${this.url}/categories`, categories);
   }
 
   update(id: string, category: Category) {

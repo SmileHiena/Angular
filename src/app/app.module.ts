@@ -1,4 +1,4 @@
-import { ProductEditComponent } from './components/product-edit/product-edit.component';
+
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +19,9 @@ import { CategoryAddComponent } from './components/category-add/category-add.com
 import { CategoryEditComponent } from './components/category-edit/category-edit.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
+
 
 
 
@@ -37,6 +40,7 @@ const routes: Routes = [
   { path: 'product-list', component: ProductListComponent },
   { path: 'product-add', component: ProductAddComponent},
   { path: 'product-edit/:id', component: ProductEditComponent},
+  { path: 'product-detail/:id', component: ProductDetailComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
 ];
 
@@ -55,6 +59,7 @@ const routes: Routes = [
     ProductListComponent,
     ProductAddComponent,
     ProductEditComponent,
+    ProductDetailComponent,
   ],
   imports: [
 
