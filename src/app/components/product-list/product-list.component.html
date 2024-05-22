@@ -1,0 +1,38 @@
+<body class="sub_page">
+  <!-- food section -->
+
+  <section class="food_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Our Menu</h2>
+      </div>
+      <div class="table table-hover">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <!-- {{product | json}} -->
+              <td><img src="{{ product.img }}" style="width: 100px; height: 100px;"></td>
+              <td>{{ product.name }}</td>
+              <td>{{ product.price }}</td>
+              <td>
+                <a [routerLink]="['/product-edit/' + product.id]" routerLinkActive="router-link-active" >Edit</a> |
+                <a href="javascript:void(0)" (click)="deleteProduct(product.id)">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="d-flex justify-content-center">
+          <a class="btn btn-primary" [routerLink]="['/product-add']" routerLinkActive="router-link-active" >Add Category</a>
+      </div>
+    </div>
+  </section>
+</body>
